@@ -18,13 +18,13 @@ function Player({ details, rank }) {
   const green = {
     color: "green"
   }
-  const yellow = {
-    color: "yellow"
+  const blue = {
+    color: "blue"
   }
 
   return (
     <div>
-        <h3 className='player' style={text === '0' ? black : text === '1' ? green : text === '0.5' ? yellow : red}>
+        <h3 className='player' style={text === '0' ? black : text === '1' ? green : text === '0.5' ? blue : red}>
             {r != null ? '('+(r+1)+') ' : ''}
             {info.name +' '}
             {/* {'('+info.org+') '} */}

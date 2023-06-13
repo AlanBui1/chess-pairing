@@ -369,12 +369,12 @@ function App() {
     return (
       <div>
         <h1 id='center'>Leaderboard</h1>
-        <div id='flex-container'>
-          <div id='flex-child'>
+        <div id='center'>
+          {/* <div id='flex-child'> */}
             {leaderboard.map((item, index) => (
               <Player details = {item} rank = {index}></Player>
             ))}
-          </div>
+          {/* </div> */}
         </div>
 
         <button className="button" id='first' onClick={switchScreen}>Go to Pairings Sheet</button>
