@@ -58,36 +58,14 @@ function App() {
     setCurScreen("PRINT");
   }
 
-  function print(){
-    const ele = document.querySelectorAll('#white div');
-
-    var cnt = 0;
-    const players = {}
-    ele.forEach((div) => {
-      // console.log(whitePlayers[cnt].toJSON());
-      // var playerScore = parseFloat(whitePlayers[cnt].score);
-      // var boxScore = parseFloat(div.getElementsByClassName('scorebox')[0].value);
-      // console.log(whitePlayers[cnt].name);
-      // console.log(playerScore + boxScore);
-      players[whitePlayers[cnt].id] = whitePlayers[cnt].toJSON();
-      cnt++;
-    });
-
-    console.log(players);
-  }
-
-  function pr(){
-    console.log(leaderboard);
-  }
-
   const removePlayers = () => {
     const ele = document.querySelectorAll('#flex-child div');
     var ind = 0;
     var newPlayers = [];
 
     ele.forEach((div) => {
-      var boxScore = parseFloat(div.getElementsByClassName('scorebox')[0].value);
-      if (boxScore !== -1){
+      var boxScore = div.getElementsByClassName('scorebox')[0].value;
+      if (boxScore !== ' '){
         newPlayers.push(leaderboard[ind]);
       }
       ind++;
@@ -376,13 +354,11 @@ function App() {
           </div>
         </div>      
 
-        
-        <button className='button' onClick={updateLeaderboard}>Update</button>
-        <button className='button' onClick={pairRound}>Pair</button>
-        <div>
-          <button className="button" onClick={switchScreen}>Scoreboard</button>
-          <button className="button" onClick={toPrint}>Go to Print Sheet</button>
-        </div>
+        <button className="button" id='first' onClick={switchScreen}>Scoreboard</button>
+        <button className="button" id='second' onClick={toPrint}>Go to Print Sheet</button>
+        <button className='button' id='third' onClick={pairRound}>Pair</button>
+        <button className='button' id='fourth' onClick={updateLeaderboard}>Update</button>
+
       </div>
     );
   }
@@ -399,19 +375,19 @@ function App() {
           </div>
         </div>
 
-        <button className='button' onClick={pairRound}>Pair</button>
-        <button className='button' onClick={removePlayers}>Remove</button>
-        <button className='button' onClick={pr}>print</button>
+        <button className="button" id='first' onClick={switchScreen}>Go to Pairings Sheet</button>
+        <button className="button" id='second' onClick={toPrint}>Go to Print Sheet</button>
+        <button className='button' id='third' onClick={pairRound}>Pair</button>
+        <button className='button' id='fourth' onClick={removePlayers}>Remove</button>
         <div>
-          <input type="file" name="file" onChange={fileChangeHandler} />
+          <input type="file" name="file" id='right1' onChange={fileChangeHandler} />
             <div>
-              <button className='button' onClick={handleSubmission}>Import Leaderboard</button>
+              <button className='button' id = 'right2' onClick={handleSubmission}>Import Leaderboard</button>
             </div>
         </div>
-        <button className='button' type="button" onClick={exportLeaderboard}>Export Leaderboard</button>
+        <button className='button' type="button" id = 'right1' onClick={exportLeaderboard}>Export Leaderboard</button>
 
-        <button className="button" onClick={switchScreen}>Go to Pairings Sheet</button>
-        <button className="button" onClick={toPrint}>Go to Print Sheet</button>
+       
       </div>
     );
   }

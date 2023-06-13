@@ -60,8 +60,41 @@ code {
   height: 40px;
   width: 100px;
   background-color: rgba(1, 17, 111, 0.701);
+  bottom: -4px;
+  margin: 20px;
+  position: fixed;
 }
 
 .boardnum{
   margin-bottom: 38px;
+}
+
+#first{
+  left: 10px;
+}
+#second{
+  left: 120px;
+}
+#third{
+  left: 230px;
+}
+#fourth{
+  left: 340px;
+}
+#fifth{
+  left: 450px;
+}
+#sixth{
+  left: 560px;
+}
+
+#right1{
+  position: fixed;
+  bottom: -4px;
+  right: 10px;
+}
+#right2{
+  position: fixed;
+  bottom: -4px;
+  right: 120px;
 }
