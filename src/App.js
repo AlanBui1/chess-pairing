@@ -116,8 +116,8 @@ function App() {
   }
 
   const getColorDue = (player) => {
-    if (player.numWhite > player.numBlack) return WHITE;
-    if (player.numBlack > player.numWhite) return BLACK;
+    if (player.numWhite > player.numBlack) return BLACK;
+    if (player.numBlack > player.numWhite) return WHITE;
     if (Math.random() < 0.5) return WHITE;
     return BLACK;
   }

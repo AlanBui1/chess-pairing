@@ -1,4 +1,4 @@
-# Pairing Software for Ches
+# Pairing Software for Chess
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -25,3 +25,14 @@ Allows user to import data
 ### Export 
 
 Exports tournament data to JSON and downloads it
+
+JSONs are in the format:
+
+PLAYERNAME: {
+    "name": PLAYERNAME,
+    "opps": [],
+    "score": SCORE,
+    "org": ORG,
+    "numWhite": NUMWHITE,
+    "numBlack": NUMBLACK
+}
