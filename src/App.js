@@ -36,7 +36,7 @@ function App() {
       for (var key in jsonData){
         newBoard.push(jsonData[key]);
       }
-
+      newBoard.sort(() => Math.random() - 0.5);
       newBoard.sort(compareByScore);
 
       setLeaderboard(newBoard);
@@ -109,6 +109,8 @@ function App() {
       var points = parseFloat(line.substring(ind+1, ind2));
       newPlayers[findPlayer(name)].score = points+boxScore;
     });
+    
+    newBoard.sort(() => Math.random() - 0.5);
     newPlayers.sort(compareByScore);
     setLeaderboard(newPlayers);
   }
@@ -357,7 +359,7 @@ function App() {
         <button className="button" id='first' onClick={switchScreen}>Scoreboard</button>
         <button className="button" id='second' onClick={toPrint}>Go to Print Sheet</button>
         <button className='button' id='third' onClick={pairRound}>Pair</button>
-        <button className='button' id='fourth' onClick={updateLeaderboard}>Update</button>
+        <button className='button' id='right1' onClick={updateLeaderboard}>Update</button>
 
       </div>
     );

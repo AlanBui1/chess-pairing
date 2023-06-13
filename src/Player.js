@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function Player({ details, rank }) {
   const [info, setInfo] = useState(details);
-  const [text, setText] = useState(' ');
+  const [text, setText] = useState('');
   const [r, setRank] = useState(rank);
 
   const handleChange = (event) => {
