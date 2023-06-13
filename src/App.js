@@ -110,7 +110,7 @@ function App() {
       newPlayers[findPlayer(name)].score = points+boxScore;
     });
     
-    newBoard.sort(() => Math.random() - 0.5);
+    newPlayers.sort(() => Math.random() - 0.5);
     newPlayers.sort(compareByScore);
     setLeaderboard(newPlayers);
   }
