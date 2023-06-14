@@ -36,7 +36,6 @@ function App() {
       for (var key in jsonData){
         newBoard.push(jsonData[key]);
       }
-      newBoard.sort(() => Math.random() - 0.5);
       newBoard.sort(compareByScore);
 
       setLeaderboard(newBoard);
@@ -59,21 +58,22 @@ function App() {
   }
 
   const removePlayers = () => {
-    const ele = document.querySelectorAll('#flex-child div');
-    var ind = 0;
+    const ele = document.querySelectorAll('#center div');
+    var ind = -1;
     var newPlayers = [];
+    console.log(ele);
 
     ele.forEach((div) => {
-      var boxScore = div.getElementsByClassName('scorebox')[0].value;
-      if (boxScore !== ''){
-        newPlayers.push(leaderboard[ind]);
-      }
+      if (ind >= 0){
+        var boxScore = div.getElementsByClassName('scorebox')[0].value;
+        if (boxScore !== ''){
+          newPlayers.push(leaderboard[ind]);
+        }
+      } 
+      
       ind++;
     })
-
     setLeaderboard(newPlayers);
-
-    console.log(leaderboard);
   }
 
   const exportLeaderboard = () => {
@@ -110,7 +110,6 @@ function App() {
       newPlayers[findPlayer(name)].score = points+boxScore;
     });
     
-    newPlayers.sort(() => Math.random() - 0.5);
     newPlayers.sort(compareByScore);
     setLeaderboard(newPlayers);
   }
@@ -370,11 +369,11 @@ function App() {
       <div>
         <h1 id='center'>Leaderboard</h1>
         <div id='center'>
-          {/* <div id='flex-child'> */}
+          <div id='flex-child'>
             {leaderboard.map((item, index) => (
               <Player details = {item} rank = {index}></Player>
             ))}
-          {/* </div> */}
+          </div>
         </div>
 
         <button className="button" id='first' onClick={switchScreen}>Go to Pairings Sheet</button>
