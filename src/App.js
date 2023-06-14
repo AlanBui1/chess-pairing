@@ -65,7 +65,7 @@ function App() {
 
     ele.forEach((div) => {
       var boxScore = div.getElementsByClassName('scorebox')[0].value;
-      if (boxScore !== ' '){
+      if (boxScore !== ''){
         newPlayers.push(leaderboard[ind]);
       }
       ind++;
