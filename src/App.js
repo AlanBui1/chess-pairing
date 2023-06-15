@@ -11,6 +11,7 @@ function App() {
 	const [isFilePicked, setIsFilePicked] = useState(false);
   const [curScreen, setCurScreen] = useState("PAIRING");
   const [leaderboard, setLeaderboard] = useState([]);
+  const [board1, setBoard1] = useState(1);
 
   const fileChangeHandler = (event) => {
 		setSelectedFile(event.target.files[0]);
@@ -387,8 +388,6 @@ function App() {
             </div>
         </div>
         <button className='button' type="button" id = 'right1' onClick={exportLeaderboard}>Export Leaderboard</button>
-
-       
       </div>
     );
   }
@@ -399,7 +398,7 @@ function App() {
         <div id = 'flex-container2'>
           <div id='flex-child2' >
             {whitePlayers.map((item, index) => (
-              <h1 className='boardnum'>{index+1}</h1>
+              <h1 className='boardnum'>{parseInt(board1)+parseInt(index)}</h1>
             ))}
           </div>
           <div id='flex-child'>
@@ -416,6 +415,7 @@ function App() {
         </div>     
 
         <button className="button" onClick={switchScreen}>Go to Pairings Sheet</button>
+        <input type='text' value={board1} onChange={(event) => setBoard1(event.target.value)}></input>
       </div>
     )
     
