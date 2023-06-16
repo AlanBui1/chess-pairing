@@ -78,6 +78,7 @@ function App() {
   }
 
   const exportLeaderboard = () => {
+    console.log(leaderboard);
     const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
       JSON.stringify(leaderboard)
     )}`;
@@ -124,7 +125,7 @@ function App() {
 
   const hasPlayed = (p1, p2) => {
     for (var i=0; i<p1.opps.length; i++){
-      if (p1.opps[i].name === p2.name) return true;
+      if (p1.opps[i] === p2.name) return true;
     }
     return false;
   }
@@ -161,8 +162,8 @@ function App() {
           white.push(oppPlayer);
         }
         
-        curPlayer.opps.push(oppPlayer);
-        oppPlayer.opps.push(curPlayer);
+        curPlayer.opps.push(oppPlayer.name);
+        oppPlayer.opps.push(curPlayer.name);
         used[i] = 1;
         used[k] = 1;
         break;
@@ -189,8 +190,8 @@ function App() {
           white.push(oppPlayer);
         }
 
-        curPlayer.opps.push(oppPlayer);
-        oppPlayer.opps.push(curPlayer);
+        curPlayer.opps.push(oppPlayer.name);
+        oppPlayer.opps.push(curPlayer.name);
         used[i] = 1;
         used[k] = 1;
         break;
@@ -216,8 +217,8 @@ function App() {
           white.push(oppPlayer);
         }
 
-        curPlayer.opps.push(oppPlayer);
-        oppPlayer.opps.push(curPlayer);
+        curPlayer.opps.push(oppPlayer.name);
+        oppPlayer.opps.push(curPlayer.name);
         used[i] = 1;
         used[k] = 1;
         break;
@@ -244,8 +245,8 @@ function App() {
           white.push(oppPlayer);
         }
 
-        curPlayer.opps.push(oppPlayer);
-        oppPlayer.opps.push(curPlayer);
+        curPlayer.opps.push(oppPlayer.name);
+        oppPlayer.opps.push(curPlayer.name);
         used[i] = 1;
         used[k] = 1;
         break;
@@ -271,8 +272,8 @@ function App() {
           white.push(oppPlayer);
         }
 
-        curPlayer.opps.push(oppPlayer);
-        oppPlayer.opps.push(curPlayer);
+        curPlayer.opps.push(oppPlayer.name);
+        oppPlayer.opps.push(curPlayer.name);
         used[i] = 1;
         used[k] = 1;
         break;
@@ -299,8 +300,8 @@ function App() {
           white.push(oppPlayer);
         }
 
-        curPlayer.opps.push(oppPlayer);
-        oppPlayer.opps.push(curPlayer);
+        curPlayer.opps.push(oppPlayer.name);
+        oppPlayer.opps.push(curPlayer.name);
         used[i] = 1;
         used[k] = 1;
         break;
@@ -325,8 +326,8 @@ function App() {
           white.push(oppPlayer);
         }
 
-        curPlayer.opps.push(oppPlayer);
-        oppPlayer.opps.push(curPlayer);
+        curPlayer.opps.push(oppPlayer.name);
+        oppPlayer.opps.push(curPlayer.name);
         used[i] = 1;
         used[k] = 1;
         break;

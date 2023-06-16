@@ -1,9 +1,33 @@
 {
+    "Agamjit Batth": {
+        "name": "Agamjit Batth",
+        "opps": [],
+        "score": 0,
+        "org": "Talbot Trail Public School",
+        "numWhite": 0,
+        "numBlack": 0
+    },
     "Milan Momcilovic": {
         "name": "Milan Momcilovic",
         "opps": [],
         "score": 0,
         "org": "A.V. Graham",
+        "numWhite": 0,
+        "numBlack": 0
+    },
+    "Fynn Taylor-Kalas": {
+        "name": "Fynn Taylor-Kalas",
+        "opps": [],
+        "score": 0,
+        "org": "Bellewood Public School",
+        "numWhite": 0,
+        "numBlack": 0
+    },
+    "Adam Marar": {
+        "name": "Adam Marar",
+        "opps": [],
+        "score": 0,
+        "org": "Lakeshore Discovery",
         "numWhite": 0,
         "numBlack": 0
     },
@@ -87,24 +111,16 @@
         "numWhite": 0,
         "numBlack": 0
     },
-    "Christian Mitrevski": {
-        "name": "Christian Mitrevski",
-        "opps": [],
-        "score": 0,
-        "org": "Talbot Trail Public School",
-        "numWhite": 0,
-        "numBlack": 0
-    },
-    "Agamjit Batth": {
-        "name": "Agamjit Batth",
-        "opps": [],
-        "score": 0,
-        "org": "Talbot Trail Public School",
-        "numWhite": 0,
-        "numBlack": 0
-    },
     "Seerat Sallh": {
         "name": "Seerat Sallh",
+        "opps": [],
+        "score": 0,
+        "org": "Talbot Trail Public School",
+        "numWhite": 0,
+        "numBlack": 0
+    },
+    "Christian Mitrevski": {
+        "name": "Christian Mitrevski",
         "opps": [],
         "score": 0,
         "org": "Talbot Trail Public School",
@@ -139,7 +155,7 @@
         "name": "Zachary Pazner",
         "opps": [],
         "score": 0,
-        "org": "Sandwich West Public School",
+        "org": "Sandwich West P.S.",
         "numWhite": 0,
         "numBlack": 0
     },
@@ -147,7 +163,7 @@
         "name": "Bruce Banh",
         "opps": [],
         "score": 0,
-        "org": "Sandwich West Public School",
+        "org": "Sandwich West P.S.",
         "numWhite": 0,
         "numBlack": 0
     },
@@ -155,7 +171,7 @@
         "name": "Aleksander Stavropoulos",
         "opps": [],
         "score": 0,
-        "org": "Sandwich West Public School",
+        "org": "Sandwich West P.S.",
         "numWhite": 0,
         "numBlack": 0
     },
@@ -164,6 +180,14 @@
         "opps": [],
         "score": 0,
         "org": "St. Andre",
+        "numWhite": 0,
+        "numBlack": 0
+    },
+    "Jayden Wyma": {
+        "name": "Jayden Wyma",
+        "opps": [],
+        "score": 0,
+        "org": "St. Mary French Immersion Elementary",
         "numWhite": 0,
         "numBlack": 0
     },
@@ -252,6 +276,30 @@
         "opps": [],
         "score": 0,
         "org": "Talbot Trail Public School",
+        "numWhite": 0,
+        "numBlack": 0
+    },
+    "Daniel Lee": {
+        "name": "Daniel Lee",
+        "opps": [],
+        "score": 0,
+        "org": "Msr Jean Noel",
+        "numWhite": 0,
+        "numBlack": 0
+    },
+    "SriKarthikeya Vallabhajosyula": {
+        "name": "SriKarthikeya Vallabhajosyula",
+        "opps": [],
+        "score": 0,
+        "org": "Southwood Public School",
+        "numWhite": 0,
+        "numBlack": 0
+    },
+    "Bye": {
+        "name": "Bye",
+        "opps": [],
+        "score": -1,
+        "org": "",
         "numWhite": 0,
         "numBlack": 0
     }
