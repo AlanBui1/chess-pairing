@@ -12,6 +12,10 @@ function App() {
   const [curScreen, setCurScreen] = useState("PAIRING");
   const [leaderboard, setLeaderboard] = useState([]);
   const [board1, setBoard1] = useState(1);
+  const [name, setName] = useState('');
+  const [rating, setRating] = useState(0);
+  const [score, setScore] = useState(0);
+  const [org, setOrg] = useState('');
 
   const fileChangeHandler = (event) => {
 		setSelectedFile(event.target.files[0]);
@@ -19,6 +23,9 @@ function App() {
 	};
 
   function compareByScore(a, b){
+    if (a.score === b.score){
+      return b.rating - a.rating;
+    }
     return b.score - a.score;
   }
 
@@ -67,7 +74,7 @@ function App() {
     ele.forEach((div) => {
       if (ind >= 0){
         var boxScore = div.getElementsByClassName('scorebox')[0].value;
-        if (boxScore !== ''){
+        if (boxScore !== '1'){
           newPlayers.push(leaderboard[ind]);
         }
       } 
@@ -75,6 +82,21 @@ function App() {
       ind++;
     })
     setLeaderboard(newPlayers);
+  }
+
+  const addPlayer = () => {
+    const newP = {
+      name: name,
+      opps: [],
+      score: score,
+      org: org,
+      numWhite: 0,
+      numBlack: 0,
+      rating: rating
+    }
+    setLeaderboard(leaderboard.concat(newP));
+
+    console.log(leaderboard);
   }
 
   const exportLeaderboard = () => {
@@ -101,6 +123,8 @@ function App() {
   const updateLeaderboard = () => {
     const ele = document.querySelectorAll('#flex-child div');
     const newPlayers = leaderboard;
+
+    console.log(newPlayers);
 
     ele.forEach((div) => {
       var boxScore = parseFloat(div.getElementsByClassName('scorebox')[0].value);
@@ -382,6 +406,18 @@ function App() {
         <button className="button" id='second' onClick={toPrint}>Go to Print Sheet</button>
         <button className='button' id='third' onClick={pairRound}>Pair</button>
         <button className='button' id='fourth' onClick={removePlayers}>Remove</button>
+        <button className='button' id='fifth' onClick={addPlayer}>Add</button>
+
+        <h3 className='labels' id='first'>Name</h3>
+        <h3 className='labels' id='second'>Rating</h3>
+        <h3 className='labels' id='third'>Score</h3>
+        <h3 className='labels' id='fourth'>Org</h3>
+
+        <input  className='textfield' type='text' value={name} id='first' onChange={(event) => setName(event.target.value)}></input>
+        <input  className='textfield' type='text' value={rating} id='second' onChange={(event) => setRating(event.target.value)}></input>
+        <input  className='textfield' type='text' value={score} id='third' onChange={(event) => setScore(event.target.value)}></input>
+        <input  className='textfield' type='text' value={org} id='fourth' onChange={(event) => setOrg(event.target.value)}></input>
+
         <div>
           <input type="file" name="file" id='right1' onChange={fileChangeHandler} />
             <div>
@@ -417,6 +453,7 @@ function App() {
 
         <button className="button" onClick={switchScreen}>Go to Pairings Sheet</button>
         <input type='text' value={board1} onChange={(event) => setBoard1(event.target.value)}></input>
+        <button className='button' id='right1' onClick={updateLeaderboard}>Update</button>
       </div>
     )
     

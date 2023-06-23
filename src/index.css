@@ -65,6 +65,26 @@ code {
   position: fixed;
 }
 
+.textfield{
+  color:rgb(0, 0, 0);
+  height: 30px;
+  width: 100px;
+  background-color: rgba(0, 167, 222, 0.701);
+  top: 30px;
+  margin: 20px;
+  position: fixed;
+}
+
+.labels{
+  color:rgb(0, 0, 0);
+  height: 30px;
+  width: 100px;
+  top: 5px;
+  margin: 20px;
+  position: fixed;
+  text-align: center;
+}
+
 .boardnum{
   margin-bottom: 38px;
 }
